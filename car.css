@@ -1,0 +1,80 @@
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: url("citycar.jpg") no-repeat;
+    background-repeat: repeat-x;/*this will help when width of the image is finished during
+    animation it will help to merge the same image after that image end */
+
+    animation: back 5s linear infinite;
+    position: relative;
+    background-position: 0px;
+    overflow: hidden;
+}
+@keyframes back {
+    0%{
+        background-position: 5000px;
+    }
+    100%{
+        background-position: 0px;
+    }
+}
+.car{
+    background: url("car_body.png") no-repeat;
+    width: 1024px;
+    height: 291px;
+    bottom: -3px;
+    left: 0%;
+    position: absolute;
+    animation:back1 5s linear infinite;
+}
+
+@keyframes back1{
+    0%{
+        left: -8.5%;
+    }
+    50%{
+        left:50%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.tyre{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid blue;
+    background: rgb(6, 6, 6);
+
+}
+.left{
+    position: absolute;
+    top: 42%;
+    left: 14.4%;
+}
+.right{
+    position: absolute;
+    top: 45%;
+    right:22% ;
+}
+.rims{
+    width:120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px dotted rgb(232, 228, 228);
+    top:49%;
+    right: 23%;
+   
+    position: absolute;
+    animation: rim1 5s linear infinite;
+}
+@keyframes rim1{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
